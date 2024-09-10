@@ -90,6 +90,8 @@ export const getListings = async (req, res, next) => {
     const sort = req.query.sort || 'createdAt';
     const order = req.query.order || 'desc';
 
+    console.log(req.query.sort, req.query.order);
+
     const listings = await Listing.find({
       name: { $regex: searchTerm, $options: 'i' },
       offers,
