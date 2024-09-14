@@ -10,9 +10,8 @@ export const createReview = async (req, res, next) => {
 };
 
 export const getReviews = async (req, res, next) => {
-  const limit = parseInt(req.query.limit) || 4;
   try {
-    const reviews = await Review.find().limit(limit);
+    const reviews = await Review.find();
     return res.status(200).json(reviews);
   } catch (error) {
     next(error);
