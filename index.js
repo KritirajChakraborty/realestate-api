@@ -20,8 +20,11 @@ mongoose
   });
 
 const app = express();
-
-app.use(cors());
+const corsOptions = {
+  origin: ['https://realestate-client-j2k96ko20-kritirajs-projects.vercel.app'],
+  credentials: true,
+};
+app.use(cors(corsOptions));
 app.use(express.json());
 app.use(cookieParser());
 
