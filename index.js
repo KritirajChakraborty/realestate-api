@@ -21,7 +21,7 @@ mongoose
 
 const app = express();
 const corsOptions = {
-  origin: ['https://realestate-client-j2k96ko20-kritirajs-projects.vercel.app'],
+  origin: ['https://realestate-client-m5xcrz7fj-kritirajs-projects.vercel.app'],
   credentials: true,
 };
 app.use(cors(corsOptions));
