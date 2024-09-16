@@ -21,8 +21,10 @@ mongoose
 
 const app = express();
 const corsOptions = {
-  origin: ['https://realestate-client-m5xcrz7fj-kritirajs-projects.vercel.app'],
+  origin: true,
+  methods: ['GET', 'POST', 'DELETE'],
   credentials: true,
+  allowedHeaders: ['Content-type', 'Authorization'],
 };
 app.use(cors(corsOptions));
 app.use(express.json());
