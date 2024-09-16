@@ -31,6 +31,7 @@ export const signin = async (req, res, next) => {
         httpOnly: true,
         secure: process.env.NODE_ENV === 'production',
         sameSite: 'None',
+        path: '/',
       })
       .status(200)
       .json(rest);
